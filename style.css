@@ -1,0 +1,1203 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: poppins;
+}
+body {
+    background-color: #FCFAEE;
+}
+
+/*Navigasi Bar*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A5B68D;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.6s ease;
+}
+.navlogo img {
+    width: 250px;
+    margin-left: 15px;
+}
+.nav-menu ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 1rem;
+}
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 20px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+.nav-menu ul li a:hover {
+    background-color: #cbdfae;
+}
+
+/*Sidebar*/
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #a0ba79;
+  transition: all .5s ease;
+  top: 0px;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 110px;
+  background: #c8d4b5;
+  user-select: none;
+}
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255,255,255,1);
+  border-bottom: 1px solid rgb(137, 125, 125);
+  transition: .4s;
+  font-family: 'Arial', sans-serif;
+  text-transform: none;
+  align-items: center;
+  text-decoration: none;
+}
+.sidebar ul li:hover a {
+  padding-left: 50px;
+}
+.sidebar ul a i {
+  margin-right: 16px;
+  text-decoration: none;
+}
+#check {
+  display: none;
+}
+label #btn, label #cancel {
+  position: absolute;
+  cursor: pointer;
+  background: #47572e;
+  border-radius: 3px;
+}
+label #btn {
+  left: 40px;
+  top: 25px;
+  font-size: 25px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+label #cancel {
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 20px;
+  color: #b8da8f;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+#check:checked ~ label #btn {
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel {
+  left: 195px;
+}
+
+/*Dropdown*/
+.dropdown-artkl .dropdown-btn {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+.dropdown-menu {
+  display: none;
+  list-style: none;
+  padding-left: 20px; 
+  margin: 0;
+}
+.dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  transition: color 0.3s ease;
+}
+.dropdown-menu li a:hover {
+  text-decoration: underline #cbdfae; 
+  color: #cbdfae;
+}
+.dropdown-artkl .arrow {
+  font-size: 14px;
+  margin-left: 30px; 
+}
+
+
+/*Header*/
+.perfume-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #daebbf;
+    margin-top: 100px;
+  }
+.text-content {
+    max-width: 50%;
+    margin-left: 70px;
+  }  
+.text-content h1 {
+    font-size: 48px;
+    color: #000;
+    text-align: left;
+  }  
+.text-content h1 .highlight {
+    color: #576a3d;
+  }  
+.text-content p {
+    margin: 20px 0;
+    color: #666;
+    font-size: 22px;
+  }
+.text-content .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #576a3d;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }  
+.text-content .button:hover {
+    background-color: #7c945b;
+  }  
+.image-content img {
+    max-width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    margin-right: 70px;
+    object-fit: cover;
+    animation: zoomEffect 10s infinite;
+  }  
+  @keyframes zoomEffect {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  
+  /*About*/
+  .abt-mgssn {
+    margin: 55px 85px 55px 85px;
+    background-color: #9ab575;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  .abt-mgssn h2 {
+    color: #555;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    font-family: "Galindo";
+  }
+  .abt-mgssn p {
+    color: #44552f;
+    text-align: justify;
+    font-size: 18px;
+  }
+  /*Best Seller Product*/
+  .bestseller-title {
+    background-color: #A5B68D;
+    color: #FCFAEE;
+    padding: 15px 15px;
+    margin-top: 45px;
+    text-align: center;
+    font-size: 24px;
+} 
+.best-seller {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+.bestseller-items {
+  background-color: #e8f6d1;
+  padding: 1.5em;
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.bestseller-items img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3)
+}
+.bestseller-items:hover {
+  transform: scale(1.1);
+}
+.bestseller-items h3 {
+  margin-top: 10px;
+  color: #666;
+}
+.bestseller-items button {
+  padding: 8px 10px;
+  background-color: #8c9d74;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  color: #FCFAEE;
+}
+.container {
+  max-width: 120px;
+  margin: 0 auto;
+} 
+.bestseller-button {
+  display: flex;
+  padding: 10px 10px;
+  background-color: #576a3d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  justify-content: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}  
+.bestseller-button:hover {
+  background-color: #7c945b;
+}
+
+/*Testimoni*/
+.testimoni-hdr {
+  background-color: #A5B68D;
+  color: #FCFAEE;
+  padding: 15px 15px;
+  margin-top: 45px;
+  text-align: center;
+  font-size: 24px;
+} 
+.testimoni {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+}
+.testi {
+  margin-top: 30px;
+  background-color: #d8e0ca;
+  padding: 1.5em;
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.testi p{
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.rating {
+  color: rgb(250, 181, 53); 
+  font-size: 24px;
+}
+.rating .empty {
+  color: #878686; 
+}
+
+/*Background-Image Produk*/
+.background {
+  height: 50vh;
+  width: 100%;
+  background-image: url(Images/Product\ -\ Header.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+/*Border*/
+.background h2 {
+  color: #688f37;
+  padding: 20px 25px;
+  border: 10px double #404834;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Galindo";
+  -webkit-text-stroke: 1px black; 
+}
+/*Gallery Product*/
+.gallery {
+  width: 100%;
+}
+
+.gallery-container {
+  align-items: center;
+  display: flex;
+  height: 400px;
+  margin: 0 auto;
+  max-width: 1000px;
+  position: relative;
+}
+
+.gallery-item {
+  height: 200px;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  width: 300px;
+  z-index: 0;
+  border-radius: 15px;
+  background-size: contain;
+}
+
+.gallery-item-1 {
+  left: 15%;
+  opacity: .4;
+  transform: translateX(-50%);
+}
+
+.gallery-item-2, .gallery-item-4 {
+  height: 250px;
+  opacity: 0.8;
+  width: 380px;
+  z-index: 1;
+}
+
+.gallery-item-2 {
+  left: 30%;
+  transform: translateX(-50%);
+}
+
+.gallery-item-3 {
+  box-shadow: -2px 5px 33px 6px rgba(0,0,0,0.35);
+  height: 300px;
+  opacity: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 430px;
+  z-index: 2;
+}
+
+.gallery-item-4 {
+  left: 70%;
+  transform: translateX(-50%);
+}
+
+.gallery-item-5 {
+  left: 85%;
+  opacity: 4;
+  transform: translateX(-50%);
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+  height: 100px;
+}
+
+.gallery-controls button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 30px;
+  margin: 0 50px;
+  padding: 0 12px;
+  text-transform: capitalize;
+}
+
+.gallery-controls-button:focus{
+  outline: none;
+}
+
+.gallery-controls-previous {
+  position: relative;
+}
+
+.gallery-controls-previous::before {
+  border: solid #728656;
+  border-width: 0 5px 5px 0;
+  content: '';
+  display: inline-block;
+  height: 5px;
+  left: -30px;
+  padding: 10px;
+  position: absolute;
+  top: 25%;
+  transform: rotate(135deg) translateY(-50%);
+  transition: left 0.15s ease-in-out;
+  width: 5px;
+}
+
+.gallery-controls-previous:hover::before {
+  left: -10px;
+}
+
+.gallery-controls-next {
+  position: relative;
+}
+
+.gallery-controls-next::before {
+  border: solid #728656;
+  border-width: 0 5px 5px 0;
+  content: '';
+  display: inline-block;
+  height: 5px;
+  left: 90px;
+  padding: 10px;
+  position: absolute;
+  top: 45%;
+  transform: rotate(-45deg) translateY(-50%);
+  transition: left 0.15s ease-in-out;
+  width: 5px;
+}
+
+.gallery-controls-next:hover::before {
+  left: 70px;
+}
+
+/*Produk*/
+/*Produk EDP*/
+.edp-title {
+  background-color: #A5B68D;
+  color: #e3dfc6;
+  padding: 15px 15px;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 25px;
+}
+.edp-title h2 {
+  font-family: "Galindo";
+}
+.edp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.edp-produk {
+  background-color: #e8f6d1;
+  padding: 1.5em;
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.edp-produk img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3)
+}
+.edp-produk:hover {
+  transform: scale(1.1);
+}
+.edp-produk h3 {
+  margin-top: 10px;
+  color: #666;
+}
+.edp-produk button {
+  padding: 8px 10px;
+  background-color: #8c9d74;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  color: #FCFAEE;
+}
+
+/*Produk Oil Essential*/
+.oil-title {
+  background-color: #A5B68D;
+  color: #e3dfc6;
+  padding: 15px 15px;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 25px;
+}
+.oil-title h2 {
+  font-family: "Galindo";
+}
+.oil {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.oil-produk {
+  background-color: #e3dfc6;
+  padding: 1.5em;
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.oil-produk img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3)
+}
+.oil-produk:hover {
+  transform: scale(1.1);
+}
+.oil-produk h3 {
+  margin-top: 10px;
+  color: #666;
+}
+.oil-produk button {
+  padding: 8px 10px;
+  background-color: #8c9d74;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  color: #FCFAEE;
+}
+
+/*Produk Reed Diffuser*/
+.rd-title {
+  background-color: #A5B68D;
+  color: #e3dfc6;
+  padding: 15px 15px;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 25px;
+}
+.rd-title h2 {
+  font-family: "Galindo";
+}
+.rd {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.rd-produk {
+  background-color: #e8f6d1;
+  padding: 1.5em;
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.rd-produk img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3)
+}
+.rd-produk:hover {
+  transform: scale(1.1);
+}
+.rd-produk h3 {
+  margin-top: 10px;
+  color: #666;
+}
+.rd-produk button {
+  padding: 8px 10px;
+  background-color: #8c9d74;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  color: #FCFAEE;
+}
+
+/*Artikel Preview*/
+.artikel-hdr {
+  background-color: #A5B68D;
+  color: #FCFAEE;
+  padding: 15px 15px;
+  margin-top: 45px;
+  text-align: center;
+  font-size: 24px;
+} 
+/*Artikel Homepage*/
+.artikel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.artikel-ktn {
+  background-color: #e8f6d1;
+  padding: 2em;
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.8s ease;
+  box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.artikel-ktn:hover {
+  transform: scale(1.1);
+}
+.artikel-ktn h4 {
+  margin-bottom: 15px;
+}
+.artikel-ktn img {
+  max-width: 100%;
+  height: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+}
+.artikel-ktn p {
+  text-align: justify;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.artikel-ktn a:visited {
+  color: #728656;
+}
+.artikel-ktn a:hover, .artikel-ktn a:active {
+  background-color: #ccd6be;
+  color: #576a3d;
+}
+
+/*Artikel 1*/
+.artkl-1 {
+  margin-top: 40px;
+  margin-left: 120px;
+  margin-right: 120px;
+  text-align: justify;
+}
+.artkl-1-hdr {
+  height: 65vh;
+  width: 100%;
+  background-image: url(Images/Distilasi\ Header.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+.artkl-1-title h2 {
+  text-align: center;
+  color: #576a3d;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+.artkl-1 p {
+  font-size: 18px;
+  color: #474646;
+}
+.artkl-1 h3 {
+  color: #576a3d;
+  font-weight: bold;
+}
+.artkl-1 ol {
+  padding-left: 20px;
+}
+.artkl-1 li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #474646;
+}
+.artkl-1 ul {
+  padding-left: 20px;
+  margin-bottom: 50px;
+}
+.artkl-1 li a:link {
+  color: #576a3d;
+}
+.artkl-1 li a:visited {
+  color: #728656;
+}
+.artkl-1 li a:hover, .artkl-1 a:active {
+  background-color: #ccd6be;
+  color: #576a3d;
+}
+
+/*Artikel 2*/
+.artkl-2 {
+  margin-top: 30px;
+  margin-left: 120px;
+  margin-right: 120px;
+  text-align: justify;
+}
+.artkl-2-hdr {
+  height: 65vh;
+  width: 100%;
+  background-image: url(Images/CrueltyFree\ -\ Header.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+.artkl-2-title h2 {
+  text-align: center;
+  color: #576a3d;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+.artkl-2 p {
+  font-size: 18px;
+  color: #474646;
+}
+.artkl-2 h3 {
+  color: #576a3d;
+  font-weight: bold;
+}
+.artkl-2 li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #474646;
+}
+.artkl-2 ul {
+  padding-left: 20px;
+  margin-bottom: 50px;
+}
+.artkl-2 li a:link {
+  color: #576a3d;
+}
+.artkl-2 li a:visited {
+  color: #728656;
+}
+.artkl-2 li a:hover, .artkl-1 a:active {
+  background-color: #ccd6be;
+  color: #576a3d;
+}
+
+/*Artikel 3*/
+.artkl-3 {
+  margin-top: 40px;
+  margin-left: 120px;
+  margin-right: 120px;
+  text-align: justify;
+}
+.artkl-3-hdr {
+  height: 55vh;
+  width: 100%;
+  background-image: url(Images/Essential\ Oil\ -\ Header.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+.artkl-3-title h2 {
+  text-align: center;
+  color: #576a3d;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+.artkl-3 p {
+  font-size: 18px;
+  color: #474646;
+}
+.artkl-3 h3 {
+  color: #576a3d;
+  font-weight: bold;
+}
+.artkl-3 ol {
+  padding-left: 20px;
+}
+.artkl-3 li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #474646;
+}
+.artkl-3 ul {
+  padding-left: 20px;
+  margin-bottom: 50px;
+}
+.artkl-3 li a:link {
+  color: #576a3d;
+}
+.artkl-3 li a:visited {
+  color: #728656;
+}
+.artkl-3 li a:hover, .artkl-1 a:active {
+  background-color: #ccd6be;
+  color: #576a3d;
+}
+
+/*Footer*/
+/*Alamat*/
+footer {
+  background-color: #A5B68D ;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 35px;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  gap: 20px;
+}
+.footer-content div {
+  flex: 1;
+}
+.alamat {
+  font-size: 16px
+}
+.alamat a {
+  text-decoration: none;
+}
+.alamat a:link {
+  color: white;
+}
+.alamat a:active a:hover {
+  background-color: #ccd6be;
+  color: #576a3d;
+}
+/*Icons*/
+.media-sosial {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+.media-sosial a {
+  display: inline-block; 
+  line-height: 1; 
+  vertical-align: middle;
+  transition: all 0.3s ease;
+  border-radius: 55%;
+}
+.media-sosial a:hover {
+  background-color: #cbdfae;
+  transform: scale(1.2)
+}
+.fa-brands.fa-instagram.fa-2x {
+  color: #51613a;
+  padding: 12px;
+}
+.fa-brands.fa-tiktok.fa-2x {
+  color: #51613a;
+  padding: 12px
+}
+/*Nama*/
+.copyright p {
+  font-size: 15px;
+}
+
+/*Contact Info Page*/
+.contact-container {
+  display: flex;
+  gap: 20px; 
+  justify-content: space-between;
+  margin: 50px auto;
+  align-items: flex-start;
+  max-width: 1200px; 
+  margin-top: 160px;
+}
+.contact-info h1 {
+  text-align: center;
+  color:  #474646;
+  font-family: "Galindo";
+}
+.contact-info {
+  flex: 1; 
+  background: #f1eeee;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.kontak-kami {
+  margin-top: 20px;
+}
+.metode-ktk {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.metode-ktk p {
+  font-size: 16px;
+  color: #333;
+}
+.metode-ktk a {
+  color:  #728656;
+  text-decoration: none;
+}
+.metode-ktk a:hover {
+  text-decoration: underline;
+}
+.map-container {
+  flex: 2; 
+  height: 360px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: none;
+}
+.contact-form {
+  background: #f1eeee;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 50px;
+}
+.contact-form h2 {
+  text-align: center;
+  justify-content: center;
+  color:  #474646;
+  margin-bottom: 12px;
+}
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+.contact-form label {
+  font-weight: bold;
+  color: #728656;
+}
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: #51613a;
+}
+.contact-form .btn-submit {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #6c814e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.contact-form .btn-submit:hover {
+  background-color: #51613a;
+}
+.fa-regular.fa-envelope.fa-2x {
+  color: #51613a;
+  padding: 12px;
+}
+.fa-solid.fa-phone.fa-2x {
+  color: #51613a;
+  padding: 12px
+}
+
+/*About Page*/
+.about-bckgrnd {
+  height: 50vh;
+  width: 100%;
+  background-image: url(Images/Product\ -\ Header.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+/*Border*/
+.about-bckgrnd h2 {
+  color: #688f37;
+  padding: 20px 25px;
+  border: 10px double #404834;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Galindo";
+  -webkit-text-stroke: 1px black; 
+}
+.sejarah-mgss {
+  margin: 55px 85px 55px 85px;
+  background-color: #bfd79e;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.sejarah-mgss h2 {
+  color: #555;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+  font-family: "Galindo";
+  margin-bottom: 20px;
+}
+.sejarah-mgss p {
+  color: #44552f;
+  text-align: justify;
+  font-size: 18px;
+}
+.visimisi-container {
+  display: flex;
+  gap: 30px; 
+  justify-content: space-between;
+  margin: 60px auto;
+  align-items: flex-start;
+  max-width: 1200px; 
+  margin-top: 50px;
+}
+.visi {
+  flex: 1; 
+  background: #edfdda;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.visi h2 {
+  color: #555;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+  font-family: "Galindo";
+  margin-bottom: 15px;
+}
+.visi p {
+  color: #44552f;
+  text-align: justify;
+  font-size: 16px;
+}
+.misi {
+  flex: 2; 
+  background: #edfdda;
+  padding: 30px 50px 30px 50px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.misi h2 {
+  color: #555;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+  font-family: "Galindo";
+  margin-bottom: 15px;
+}
+.misi li {
+  color: #44552f;
+  text-align: justify;
+  font-size: 16px;
+}
+
+/*Order Page*/
+.order-bckgrnd {
+  height: 50vh;
+  width: 100%;
+  background-image: url(Images/Product\ -\ Header.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+/*Border*/
+.order-bckgrnd h2 {
+  color: #688f37;
+  padding: 20px 25px;
+  border: 10px double #404834;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Galindo";
+  -webkit-text-stroke: 1px black; 
+}
+/*Order Form*/
+.order-form {
+  background: #f1eeee;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 50px;
+}
+.order-form h2 {
+  text-align: center;
+  justify-content: center;
+  color:  #474646;
+  margin-bottom: 12px;
+}
+.order-form .form-group {
+  margin-bottom: 15px;
+}
+.order-form label {
+  font-weight: bold;
+  color: #728656;
+}
+.order-form input, .order-form textarea, .order-form select {
+  width: 100%;
+  padding: 10px 0 10px 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.order-form input:focus, .order-form textarea:focus, .order-form select:focus {
+  border-color: #51613a;
+}
+.order-form option {
+  color: #51613a;
+}
+.order-form .btn-submit {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #6c814e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.order-form .btn-submit:hover {
+  background-color: #51613a;
+}

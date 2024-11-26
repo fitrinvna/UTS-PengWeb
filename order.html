@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magissence</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x.icon" href="Images/Logo Magissence.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6e9950b797.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--Navigasi Bar-->
+    <nav id="navbar">
+        <input type="checkbox" id="check">
+        <label for="check">
+          <i class="fas fa-bars" id="btn"></i>
+          <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <div class="sidebar">
+          <header>Magissence</header>
+          <ul>
+            <li><a href="indeks.html"><i class="fas fa-qrcode"></i>Home</a></li>
+            <li class="dropdown-artkl">
+              <a href="#" class="dropdown-btn"><i class="fas fa-link"></i>Article
+                <span class="arrow">&#9660;</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="artikel-1.html">Artikel 1</a></li>
+                <li><a href="artikel-2.html">Artikel 2</a></li>
+                <li><a href="artikel-3.html">Artikel 3</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html"><i class="far fa-question-circle"></i>About</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+          </ul>
+        </div>
+        <div class="navlogo">
+          <img src="Images/Logo Magissence - Salinan.png" alt="Logo Magissence">
+        </div>
+        <div class="nav-menu">
+          <ul>
+            <li><a href="indeks.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+    </nav>
+    <script src="script.js"></script>
+    <!--Navigasi Bar End-->
+
+    <div class="order-bckgrnd">
+        <h2>Order Magissence</h2>
+    </div>
+
+      <!-- Form Kontak -->
+    <div class="order-form">
+        <h2>Order Magissence Here!</h2>
+        <form action="submit_order.php" method="POST">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea type="text" id="address" name="address" placeholder="Your Address" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+        </div>
+        <div class="form-group">
+            <label for="type-product">Product Category</label>
+            <select id="kategori" name="kategori">
+                <option value="">--Choose Product Category--</option>
+                <option value="edp">Eau De Perfume</option>
+                <option value="oil">Essential Oil</option>
+                <option value="rd">Reed Diffuser</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="product-option">Product Name</label>
+            <select name="subkategori" id="subkategori">
+                <option value="">--Choose Product--</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" min="0" value="0" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Note</label>
+            <textarea id="note" name="note" placeholder="Your Note" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">ORDER</button>
+        </form>
+        <script src="script.js"></script>
+  </div>
+
+   <!--Footer-->
+   <footer>
+    <div class="footer-content">
+      <div class="alamat">
+          <p><strong>Our Store:</strong></p>
+          <p>ITC Depok lt. 2, Jalan Margonda No.56, Kec. Pancoran Mas, Kota Depok</p>
+          <p>Email: <a href="mailto:magissence@gmail.com">magissence@gmail.com</a></p>
+          <p>Telepon: 021-3333-3333</p>
+      </div>
+      <div class="media-sosial">
+          <p><strong>Keep in Touch With Us on Our Social Media</strong></p>
+          <a href="https://www.instagram.com/magissence/" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
+          <a href="https://www.tiktok.com/@magissence.id" target="_blank"><i class="fa-brands fa-tiktok fa-2x"></i></a>    
+      </div>
+  </div>
+  
+  <div class="copyright">
+      <p>&copy;2024 Magissence. All Rights Reserved.</p>
+      <p>Fitri Noviana (11220251000054)</p> 
+  </div>
+  </footer>
+  
+  
+</body>
+</html>
